@@ -1,51 +1,44 @@
 # 🏫 Gestionale Classe 2^B - Web App
 
-> Piattaforma web progressiva per la gestione delle attività scolastiche, orari e comunicazioni di classe. Sviluppata con tecnologie web moderne e il supporto dell'Intelligenza Artificiale.
+> Dall'inefficienza dei fogli di calcolo a una Web App progressiva realizzata con l'aiuto dell'IA.
 
-## 📋 Descrizione del Progetto
-Questo progetto nasce dall'esigenza di digitalizzare e semplificare l'organizzazione della classe 2^B. L'applicazione funge da hub centrale per studenti e rappresentanti, permettendo una gestione rapida e visuale delle informazioni scolastiche.
+## 📖 Storia e Genesi del Progetto
+Questo progetto nasce da un'esigenza reale e operativa. Inizialmente, la gestione della classe (2^B) era affidata a un sistema frammentato basato su fogli di calcolo:
+1.  **Foglio Privato (Admin):** Gestione interna per me e la Vice-Rappresentante.
+2.  **Foglio Pubblico (Studenti):** Consultazione orari e avvisi.
 
-L'interfaccia è stata progettata con uno stile **"iOS Liquid Glass"**, offrendo un'esperienza utente moderna, fluida e responsive (ottimizzata sia per desktop che per mobile).
+La difficoltà nel mantenere sincronizzati i dati e la gestione macchinosa ("sclerare tra un foglio e l'altro") hanno fatto scattare la scintilla: **automatizzare tutto tramite una Web App.**
 
-## ✨ Funzionalità Principali
+L'obiettivo era creare un unico hub centralizzato che mostrasse dati diversi in base all'utente (Studenti vs Rappresentanti), eliminando il doppio lavoro.
 
-### 👤 Per gli Studenti
-* **Orario Interattivo:** Visualizzazione settimanale con indicatori per interrogazioni, verifiche ed eventi.
-* **Bacheca Digitale:** Avvisi, circolari e comunicazioni filtrabili per categoria (Verifica, Avviso, Info).
-* **Stato Rappresentanti:** Visualizzazione in tempo reale della disponibilità dei rappresentanti (Disponibile, In Studio, Offline, ecc.).
-* **Countdown & Citazioni:** Widget motivazionali e conti alla rovescia per eventi importanti.
-* **Archivio Documenti:** Accesso rapido a regolamenti e verbali.
+## ⚙️ Metodologia di Sviluppo: "Human-in-the-loop"
+Il progetto è un esempio pratico di collaborazione tra sviluppatore umano e Intelligenza Artificiale Generativa (Gemini). Il workflow seguito è stato:
 
-### 🛡️ Pannello Amministrazione (Dashboard)
-* **Gestione Ruoli:** Login differenziato per Rappresentante e Vice.
-* **Editor Orario:** Modifica rapida delle materie e tipologie di lezione (es. Assemblea, Gita).
-* **Gestione Segnalazioni:** Sistema di ticket per proposte e problemi della classe.
-* **Tracker:** Monitoraggio quote, firme e scadenze.
-* **Sistema di Votazione:** Modulo per sondaggi live durante le assemblee.
+1.  **Ideazione & Prompt Engineering:** Ho definito la struttura e le richieste specifiche fornendo a Gemini il contesto e i framework desiderati.
+2.  **Generazione della Base:** L'IA ha fornito lo scheletro del codice e la logica JavaScript complessa (interazione con Firebase).
+3.  **Refining Manuale (Il tocco umano):**
+    * Intervento diretto sul codice per correzioni di UI/UX.
+    * Aggiustamento fine del CSS (padding, spaziature, layout) per garantire la leggibilità che l'IA non riusciva a perfezionare.
+4.  **Beta Testing & QA:** Collaborazione con la Vice-Rappresentante che ha testato le funzionalità in tempo reale, permettendo di identificare bug e migliorare il flusso utente.
 
-## 🛠️ Tecnologie Utilizzate
-Il progetto è una *Single Page Application* (SPA) che non richiede compilazione, basata su:
+## ✨ Funzionalità del Sito
 
-* **Frontend:** HTML5, JavaScript (ES6 Modules).
-* **Styling:** [Tailwind CSS](https://tailwindcss.com/) (configurato via CDN per Glassmorphism avanzato).
-* **Backend & Database:** [Google Firebase](https://firebase.google.com/) (Firestore per i dati, Authentication per il login).
-* **Librerie Ausiliarie:**
-    * *SweetAlert2* per i popup e le modali.
-    * *FontAwesome* per l'iconografia.
+### 🔒 Area Riservata (Rappresentanti)
+Sostituisce il vecchio "Foglio Privato".
+* Login differenziato (Admin/Vice).
+* Gestione centralizzata di orari e comunicazioni.
+* Pannello di controllo per le quote e le segnalazioni.
 
-## 🤖 Ruolo dell'Intelligenza Artificiale
-Questo progetto è stato realizzato con la collaborazione attiva dell'Intelligenza Artificiale. L'IA è stata utilizzata come *Pair Programmer* per:
-1.  Generare la struttura boilerplate del codice HTML/JS.
-2.  Ottimizzare le classi Tailwind per ottenere l'effetto "Glass" complesso.
-3.  Debuggare le chiamate asincrone al database Firebase.
-4.  Implementare la logica di rendering condizionale (vista Mobile vs Desktop).
+### 🌍 Area Pubblica (Classe)
+Sostituisce il vecchio "Foglio Pubblico".
+* Interfaccia *mobile-first* stile iOS.
+* Orario dinamico sempre aggiornato.
+* Bacheca avvisi e countdown verifiche.
 
-## 🚀 Installazione e Uso
-Poiché l'applicazione utilizza CDN e Firebase lato client, non è necessaria alcuna installazione locale (es. `npm install`).
-
-1.  Clona la repository o scarica il file `index.html`.
-2.  Apri il file `index.html` in un browser moderno.
-3.  *Nota:* Per le funzionalità di amministrazione è necessario possedere le credenziali registrate nel database Firebase collegato.
+## 🛠️ Stack Tecnologico
+* **Core:** HTML5, JavaScript (Vanilla/ES6).
+* **Design:** Tailwind CSS (con configurazione custom per effetto Glassmorphism).
+* **Backend:** Google Firebase (Firestore & Auth).
 
 ---
-*Progetto scolastico a scopo didattico - Classe 2^B Informatica - CFP Pio XI*
+*Progetto sviluppato da [Il Tuo Nome] con il supporto di Gemini AI e il testing di [Nome Vice] - Classe 2^B*
